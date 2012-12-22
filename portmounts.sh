@@ -61,7 +61,7 @@ for i in "$@"; do
 		[ ${VERB} ] && echo "New Port: ${category}/${portname}"
 		mkdir -p "${PORTSDIR}/${category}/${portname}"
 	fi
-	[ ${VERB} ] && echo "Mount: ${dirname} -> ${PORTSDIR}/${category}/${portname}"
+	[ "x${VERB}" != "x0" ] && echo "Mount: ${dirname} -> ${PORTSDIR}/${category}/${portname}"
 	mount -t nullfs "${dirname}" "${PORTSDIR}/${category}/${portname}"
     done
 done
