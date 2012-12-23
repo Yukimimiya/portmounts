@@ -32,6 +32,7 @@
 .Nd merge alpha/beta ports into the real portstree
 .Sh SYNOPSIS
 .Nm
+.Op Fl f
 .Op Fl P Ar PORTSDIR
 .Op Fl X Ar excludes ...
 .Op Fl v
@@ -49,6 +50,8 @@ Options that
 .Nm
 understands:
 .Bl -tag -width indent
+.It Fl f
+Write out fstab entry to stdout.
 .It Fl P Ar PORTSDIR
 Root of the existing portstree. Defaults to 
 .Dq Li "/usr/ports"
